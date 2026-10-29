@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution7 {
+
+    // Завдання 1: Fizz Buzz
+    public List<String> fizzBuzz(int n) {
+        List<String> result = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                result.add("FizzBuzz");
+            } else if (i % 3 == 0) {
+                result.add("Fizz");
+            } else if (i % 5 == 0) {
+                result.add("Buzz");
+            } else {
+                result.add(String.valueOf(i));
+            }
+        }
+        return result;
+    }
+
+    // Завдання 2: Number of Steps to Reduce a Number to Zero
+    public int numberOfSteps(int num) {
+        int steps = 0;
+        while (num > 0) {
+            if (num % 2 == 0) {
+                num /= 2;
+            } else {
+                num -= 1;
+            }
+            steps++;
+        }
+        return steps;
+    }
+}
