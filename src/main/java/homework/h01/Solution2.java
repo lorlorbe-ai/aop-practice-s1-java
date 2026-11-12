@@ -1,5 +1,6 @@
-package homework.h01;
+public class Solution2 {
+    public int countOddNumbers(int low, int high) {
+        return (high - low) / 2 + (low % 2 != 0 || high % 2 != 0 ? 1 : 0);
+    }
+}
 
-// advanced
-// https://leetcode.com/problems/rectangle-area/
-public class T2 {}
